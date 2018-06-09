@@ -1,0 +1,6 @@
+framework module Pods_XDSecurityDefense_Tests {
+  umbrella header "Pods-XDSecurityDefense_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

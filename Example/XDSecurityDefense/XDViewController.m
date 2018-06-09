@@ -7,6 +7,7 @@
 //
 
 #import "XDViewController.h"
+#import "XDSecurityDefenseManager.h"
 
 @interface XDViewController ()
 
@@ -18,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [XDSecurityDefenseManager initWithClassPrefix:@[@"XD"] ignoreFunctions:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +28,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)customFunc2
+{
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidAppear {
+    
+}
+
+- (void)viewDidAppear2 {
+    
+}
 @end

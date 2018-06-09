@@ -10,6 +10,11 @@
 
 @implementation XDAppDelegate
 
+- (void)customFunc
+{
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

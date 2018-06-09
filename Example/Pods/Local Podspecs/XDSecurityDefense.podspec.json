@@ -1,0 +1,22 @@
+{
+  "name": "XDSecurityDefense",
+  "version": "0.1.0",
+  "summary": "A short description of XDSecurityDefense.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shixiaoda/XDSecurityDefense",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shixiaoda": "shixiaoda@babybus.com"
+  },
+  "source": {
+    "git": "https://github.com/shixiaoda/XDSecurityDefense.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XDSecurityDefense/Classes/**/*"
+}

@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ADAAB9C3D3A3A7DD8A4E969217C8652 /* XDSecurityDefense.h in Headers */ = {isa = PBXBuildFile; fileRef = D323918F6E724C93FC25562485C28627 /* XDSecurityDefense.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		167A6CEB1C221AC2C8C15E172D5EF411 /* Pods-XDSecurityDefense_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED60B367140A916E428DEBCD533A165 /* Pods-XDSecurityDefense_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AC3C080C17B74E34D008FBD384FE868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1C89255800CBE87C71410733DB2FA444 /* XDSecurityDefenseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D254AAAB12A24DD88170DA05C16963A /* XDSecurityDefenseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E59A208011FD545EF7386A79ACAD006 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		70416D79325EF6F17BEC62C99D6264CE /* XDSecurityDefenseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2937534361F5C7F679C7AE432786B676 /* XDSecurityDefenseManager.m */; };
+		71C7ABBF588B5476CF712A0B9100C33F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C1139A42C281A6B3142CAA817875A5D1 /* Pods-XDSecurityDefense_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC82CE8EB67E5E8225899D51DD153C /* Pods-XDSecurityDefense_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3A880DF2A4E7908D37B7952CC4B8144 /* XDSecurityDefense-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA112FBD3E727AA262FD6FB6297BF22B /* XDSecurityDefense-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D728985BF84572D7DA06529C857F2AC8 /* Pods-XDSecurityDefense_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA161DBBA64B2DD7CD6158BC0DE26E9 /* Pods-XDSecurityDefense_Example-dummy.m */; };
+		EDA3386489BAD6719A7D322CC75DA7C1 /* Pods-XDSecurityDefense_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 623CD8F6A74154A2BD3CB6BE9A07F763 /* Pods-XDSecurityDefense_Tests-dummy.m */; };
+		F7DAEB94A084E193EF82B8CC5E1245D4 /* XDSecurityDefense-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7798D25AE77C8597FF5A27FBC812460 /* XDSecurityDefense-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D050247C242B0264A8932252995BB87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DB25BDC0596F05E2C6F3C6B2DBFF94A;
+			remoteInfo = XDSecurityDefense;
+		};
+		553FD033B69A57450D96E4C1F71A6585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B886CE86DD2FB2A8E6401EE74A1336FE;
+			remoteInfo = "Pods-XDSecurityDefense_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0940588FF78C3D958C13441E50197A8F /* Pods-XDSecurityDefense_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDSecurityDefense_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		12C795F16BDEE1C1088481C2A7EDADC3 /* Pods-XDSecurityDefense_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDSecurityDefense_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1ACC82CE8EB67E5E8225899D51DD153C /* Pods-XDSecurityDefense_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XDSecurityDefense_Example-umbrella.h"; sourceTree = "<group>"; };
+		1ED60B367140A916E428DEBCD533A165 /* Pods-XDSecurityDefense_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XDSecurityDefense_Tests-umbrella.h"; sourceTree = "<group>"; };
+		2937534361F5C7F679C7AE432786B676 /* XDSecurityDefenseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XDSecurityDefenseManager.m; path = XDSecurityDefense/Classes/XDSecurityDefenseManager.m; sourceTree = "<group>"; };
+		2D2361B574BD82225B5507C63FB71393 /* Pods_XDSecurityDefense_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XDSecurityDefense_Tests.framework; path = "Pods-XDSecurityDefense_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB463E128B31B4B5B03E4521EEB7BB4 /* Pods-XDSecurityDefense_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XDSecurityDefense_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4E1EE70C3F8F63DCF4763A02DE8B50F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA161DBBA64B2DD7CD6158BC0DE26E9 /* Pods-XDSecurityDefense_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XDSecurityDefense_Example-dummy.m"; sourceTree = "<group>"; };
+		54E9D71F4C47494408C490F28071DD44 /* Pods_XDSecurityDefense_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XDSecurityDefense_Example.framework; path = "Pods-XDSecurityDefense_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		560D43D8B6012C3035FFA93F331653E8 /* Pods-XDSecurityDefense_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XDSecurityDefense_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		623CD8F6A74154A2BD3CB6BE9A07F763 /* Pods-XDSecurityDefense_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XDSecurityDefense_Tests-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C079A627E4FBEA11D65CD19487C8409 /* Pods-XDSecurityDefense_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDSecurityDefense_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		6D254AAAB12A24DD88170DA05C16963A /* XDSecurityDefenseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XDSecurityDefenseManager.h; path = XDSecurityDefense/Classes/XDSecurityDefenseManager.h; sourceTree = "<group>"; };
+		7E0EE52F0B4AEB17C07BD994585890BC /* Pods-XDSecurityDefense_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDSecurityDefense_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		85AC9035C03EDE0830144C95BE9D3A7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A8B1A2EA25CD22FFE10A273B6493090 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9717BEF3B728FF5A9981417246A34579 /* Pods-XDSecurityDefense_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDSecurityDefense_Example-resources.sh"; sourceTree = "<group>"; };
+		9967E6AB1EF0AA79A431B6C61BEA96BF /* Pods-XDSecurityDefense_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XDSecurityDefense_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		99E7D8A2C103A5DA55E625AD505EEBB7 /* Pods-XDSecurityDefense_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDSecurityDefense_Tests-resources.sh"; sourceTree = "<group>"; };
+		AAC257386D7BADE1279729FE0D3B9278 /* Pods-XDSecurityDefense_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XDSecurityDefense_Example.modulemap"; sourceTree = "<group>"; };
+		AB898FCB087EFFC5911F4064079195A6 /* XDSecurityDefense-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XDSecurityDefense-prefix.pch"; sourceTree = "<group>"; };
+		B494530CF37A7EC28B6B69FC4DBA3E39 /* XDSecurityDefense.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XDSecurityDefense.xcconfig; sourceTree = "<group>"; };
+		BB02C46F2905BA5B3C0C3600DE33EA39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65C7EA0836FF534DB382A2713F512D2 /* XDSecurityDefense.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XDSecurityDefense.modulemap; sourceTree = "<group>"; };
+		C80948B7DEFAB91C29C8215E8DBA57A8 /* Pods-XDSecurityDefense_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XDSecurityDefense_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C82F7EA075BA59AAA5BB381E75BDB525 /* Pods-XDSecurityDefense_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XDSecurityDefense_Tests.modulemap"; sourceTree = "<group>"; };
+		CC6CFB6621120BE8C8C01385966C73DA /* XDSecurityDefense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XDSecurityDefense.framework; path = XDSecurityDefense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15FE54BD4D95BB0B8B294ED4C9343C1 /* XDSecurityDefense.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = XDSecurityDefense.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D323918F6E724C93FC25562485C28627 /* XDSecurityDefense.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XDSecurityDefense.h; path = XDSecurityDefense/Classes/XDSecurityDefense.h; sourceTree = "<group>"; };
+		DE716EDDF0431DDEBAA30AFA58BCFC22 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E7798D25AE77C8597FF5A27FBC812460 /* XDSecurityDefense-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XDSecurityDefense-dummy.m"; sourceTree = "<group>"; };
+		E9A7FCCE1829AF8FA4D025BE79777803 /* Pods-XDSecurityDefense_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XDSecurityDefense_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F149AE44D13D3F2A5DEED7A87F4BFBB2 /* Pods-XDSecurityDefense_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XDSecurityDefense_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		FA112FBD3E727AA262FD6FB6297BF22B /* XDSecurityDefense-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XDSecurityDefense-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		005CD4BFBD3B8C2D93F1C3B22D971A52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C7ABBF588B5476CF712A0B9100C33F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		083D8A23D99212460FABF861F2FEEB2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E59A208011FD545EF7386A79ACAD006 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDBBFC2500C85E459CD5E23D33A69C21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC3C080C17B74E34D008FBD384FE868 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0439202AA254F6F0BA296DA4D4ADAC3F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72E9A0465A1ABDDEA34CEE1F79D5FF04 /* Pods-XDSecurityDefense_Example */,
+				ABDC30120947C86BF7EA78FB66D8A73B /* Pods-XDSecurityDefense_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2BB1B9104A1C4F4F1DD3D653390906B5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8A8B1A2EA25CD22FFE10A273B6493090 /* LICENSE */,
+				DE716EDDF0431DDEBAA30AFA58BCFC22 /* README.md */,
+				D15FE54BD4D95BB0B8B294ED4C9343C1 /* XDSecurityDefense.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		524603FA31D6A749CBAC0624D9079CA8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80D6BCBF7112A6654B1CDEFF2D41659F /* XDSecurityDefense */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		72E9A0465A1ABDDEA34CEE1F79D5FF04 /* Pods-XDSecurityDefense_Example */ = {
+			isa = PBXGroup;
+			children = (
+				BB02C46F2905BA5B3C0C3600DE33EA39 /* Info.plist */,
+				AAC257386D7BADE1279729FE0D3B9278 /* Pods-XDSecurityDefense_Example.modulemap */,
+				560D43D8B6012C3035FFA93F331653E8 /* Pods-XDSecurityDefense_Example-acknowledgements.markdown */,
+				F149AE44D13D3F2A5DEED7A87F4BFBB2 /* Pods-XDSecurityDefense_Example-acknowledgements.plist */,
+				4EA161DBBA64B2DD7CD6158BC0DE26E9 /* Pods-XDSecurityDefense_Example-dummy.m */,
+				C80948B7DEFAB91C29C8215E8DBA57A8 /* Pods-XDSecurityDefense_Example-frameworks.sh */,
+				9717BEF3B728FF5A9981417246A34579 /* Pods-XDSecurityDefense_Example-resources.sh */,
+				1ACC82CE8EB67E5E8225899D51DD153C /* Pods-XDSecurityDefense_Example-umbrella.h */,
+				7E0EE52F0B4AEB17C07BD994585890BC /* Pods-XDSecurityDefense_Example.debug.xcconfig */,
+				E9A7FCCE1829AF8FA4D025BE79777803 /* Pods-XDSecurityDefense_Example.release.xcconfig */,
+			);
+			name = "Pods-XDSecurityDefense_Example";
+			path = "Target Support Files/Pods-XDSecurityDefense_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				524603FA31D6A749CBAC0624D9079CA8 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				7FC75A6F2F20C6EC59BF8C344BE350AF /* Products */,
+				0439202AA254F6F0BA296DA4D4ADAC3F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FC75A6F2F20C6EC59BF8C344BE350AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54E9D71F4C47494408C490F28071DD44 /* Pods_XDSecurityDefense_Example.framework */,
+				2D2361B574BD82225B5507C63FB71393 /* Pods_XDSecurityDefense_Tests.framework */,
+				CC6CFB6621120BE8C8C01385966C73DA /* XDSecurityDefense.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80D6BCBF7112A6654B1CDEFF2D41659F /* XDSecurityDefense */ = {
+			isa = PBXGroup;
+			children = (
+				D323918F6E724C93FC25562485C28627 /* XDSecurityDefense.h */,
+				6D254AAAB12A24DD88170DA05C16963A /* XDSecurityDefenseManager.h */,
+				2937534361F5C7F679C7AE432786B676 /* XDSecurityDefenseManager.m */,
+				2BB1B9104A1C4F4F1DD3D653390906B5 /* Pod */,
+				C36ECFFE1261AC93E12EC791A07AB507 /* Support Files */,
+			);
+			name = XDSecurityDefense;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		ABDC30120947C86BF7EA78FB66D8A73B /* Pods-XDSecurityDefense_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				85AC9035C03EDE0830144C95BE9D3A7B /* Info.plist */,
+				C82F7EA075BA59AAA5BB381E75BDB525 /* Pods-XDSecurityDefense_Tests.modulemap */,
+				9967E6AB1EF0AA79A431B6C61BEA96BF /* Pods-XDSecurityDefense_Tests-acknowledgements.markdown */,
+				4BB463E128B31B4B5B03E4521EEB7BB4 /* Pods-XDSecurityDefense_Tests-acknowledgements.plist */,
+				623CD8F6A74154A2BD3CB6BE9A07F763 /* Pods-XDSecurityDefense_Tests-dummy.m */,
+				6C079A627E4FBEA11D65CD19487C8409 /* Pods-XDSecurityDefense_Tests-frameworks.sh */,
+				99E7D8A2C103A5DA55E625AD505EEBB7 /* Pods-XDSecurityDefense_Tests-resources.sh */,
+				1ED60B367140A916E428DEBCD533A165 /* Pods-XDSecurityDefense_Tests-umbrella.h */,
+				12C795F16BDEE1C1088481C2A7EDADC3 /* Pods-XDSecurityDefense_Tests.debug.xcconfig */,
+				0940588FF78C3D958C13441E50197A8F /* Pods-XDSecurityDefense_Tests.release.xcconfig */,
+			);
+			name = "Pods-XDSecurityDefense_Tests";
+			path = "Target Support Files/Pods-XDSecurityDefense_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C36ECFFE1261AC93E12EC791A07AB507 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E1EE70C3F8F63DCF4763A02DE8B50F4 /* Info.plist */,
+				C65C7EA0836FF534DB382A2713F512D2 /* XDSecurityDefense.modulemap */,
+				B494530CF37A7EC28B6B69FC4DBA3E39 /* XDSecurityDefense.xcconfig */,
+				E7798D25AE77C8597FF5A27FBC812460 /* XDSecurityDefense-dummy.m */,
+				AB898FCB087EFFC5911F4064079195A6 /* XDSecurityDefense-prefix.pch */,
+				FA112FBD3E727AA262FD6FB6297BF22B /* XDSecurityDefense-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/XDSecurityDefense";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		569A502ACA220C59EBC4285AE5EF7CCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1139A42C281A6B3142CAA817875A5D1 /* Pods-XDSecurityDefense_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6775A19E30B337D864EFE91ADCDC0C56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167A6CEB1C221AC2C8C15E172D5EF411 /* Pods-XDSecurityDefense_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B93B333B0CD6F3020E618B24FDD5E27 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A880DF2A4E7908D37B7952CC4B8144 /* XDSecurityDefense-umbrella.h in Headers */,
+				0ADAAB9C3D3A3A7DD8A4E969217C8652 /* XDSecurityDefense.h in Headers */,
+				1C89255800CBE87C71410733DB2FA444 /* XDSecurityDefenseManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5DB25BDC0596F05E2C6F3C6B2DBFF94A /* XDSecurityDefense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B523B951F63AACEFEEAABB59A6F7452 /* Build configuration list for PBXNativeTarget "XDSecurityDefense" */;
+			buildPhases = (
+				86074BAA5C5EB8E42FCE7FB802B337E7 /* Sources */,
+				083D8A23D99212460FABF861F2FEEB2D /* Frameworks */,
+				9B93B333B0CD6F3020E618B24FDD5E27 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XDSecurityDefense;
+			productName = XDSecurityDefense;
+			productReference = CC6CFB6621120BE8C8C01385966C73DA /* XDSecurityDefense.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9BBDDEAA2BCDD98C615AE981E79AC3AB /* Pods-XDSecurityDefense_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8588ADBEBABA19AB709088679560FB4 /* Build configuration list for PBXNativeTarget "Pods-XDSecurityDefense_Tests" */;
+			buildPhases = (
+				BE86772FA14FD8EA4EB2164B8ECDBACB /* Sources */,
+				005CD4BFBD3B8C2D93F1C3B22D971A52 /* Frameworks */,
+				6775A19E30B337D864EFE91ADCDC0C56 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF0F5E81B6F7BFA8A97524E73941CFD7 /* PBXTargetDependency */,
+			);
+			name = "Pods-XDSecurityDefense_Tests";
+			productName = "Pods-XDSecurityDefense_Tests";
+			productReference = 2D2361B574BD82225B5507C63FB71393 /* Pods_XDSecurityDefense_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B886CE86DD2FB2A8E6401EE74A1336FE /* Pods-XDSecurityDefense_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 919323FAC8E13D630AD7073A6D775BC7 /* Build configuration list for PBXNativeTarget "Pods-XDSecurityDefense_Example" */;
+			buildPhases = (
+				FDEFA7109C3C73AFEACBA61F7F2A94BD /* Sources */,
+				EDBBFC2500C85E459CD5E23D33A69C21 /* Frameworks */,
+				569A502ACA220C59EBC4285AE5EF7CCE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D1E0F34E031C43B0FFFF62D2567BCD3 /* PBXTargetDependency */,
+			);
+			name = "Pods-XDSecurityDefense_Example";
+			productName = "Pods-XDSecurityDefense_Example";
+			productReference = 54E9D71F4C47494408C490F28071DD44 /* Pods_XDSecurityDefense_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7FC75A6F2F20C6EC59BF8C344BE350AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B886CE86DD2FB2A8E6401EE74A1336FE /* Pods-XDSecurityDefense_Example */,
+				9BBDDEAA2BCDD98C615AE981E79AC3AB /* Pods-XDSecurityDefense_Tests */,
+				5DB25BDC0596F05E2C6F3C6B2DBFF94A /* XDSecurityDefense */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86074BAA5C5EB8E42FCE7FB802B337E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7DAEB94A084E193EF82B8CC5E1245D4 /* XDSecurityDefense-dummy.m in Sources */,
+				70416D79325EF6F17BEC62C99D6264CE /* XDSecurityDefenseManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE86772FA14FD8EA4EB2164B8ECDBACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA3386489BAD6719A7D322CC75DA7C1 /* Pods-XDSecurityDefense_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEFA7109C3C73AFEACBA61F7F2A94BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D728985BF84572D7DA06529C857F2AC8 /* Pods-XDSecurityDefense_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D1E0F34E031C43B0FFFF62D2567BCD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XDSecurityDefense;
+			target = 5DB25BDC0596F05E2C6F3C6B2DBFF94A /* XDSecurityDefense */;
+			targetProxy = 0D050247C242B0264A8932252995BB87 /* PBXContainerItemProxy */;
+		};
+		BF0F5E81B6F7BFA8A97524E73941CFD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-XDSecurityDefense_Example";
+			target = B886CE86DD2FB2A8E6401EE74A1336FE /* Pods-XDSecurityDefense_Example */;
+			targetProxy = 553FD033B69A57450D96E4C1F71A6585 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18B5E3BA53B96CD00E5B19AA9E7A1067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C795F16BDEE1C1088481C2A7EDADC3 /* Pods-XDSecurityDefense_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XDSecurityDefense_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XDSecurityDefense_Tests/Pods-XDSecurityDefense_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2D7EA077802FD5C685EB39BC356A4E40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B494530CF37A7EC28B6B69FC4DBA3E39 /* XDSecurityDefense.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XDSecurityDefense/XDSecurityDefense-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XDSecurityDefense/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XDSecurityDefense/XDSecurityDefense.modulemap";
+				PRODUCT_MODULE_NAME = XDSecurityDefense;
+				PRODUCT_NAME = XDSecurityDefense;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F65E80707ED95347B07416C62FB6AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0940588FF78C3D958C13441E50197A8F /* Pods-XDSecurityDefense_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XDSecurityDefense_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XDSecurityDefense_Tests/Pods-XDSecurityDefense_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		83145807FBA6FEF89B9C45FB7668C9F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E0EE52F0B4AEB17C07BD994585890BC /* Pods-XDSecurityDefense_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XDSecurityDefense_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XDSecurityDefense_Example/Pods-XDSecurityDefense_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AAF1B224216D43036545FD92D44F66C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B494530CF37A7EC28B6B69FC4DBA3E39 /* XDSecurityDefense.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XDSecurityDefense/XDSecurityDefense-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XDSecurityDefense/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XDSecurityDefense/XDSecurityDefense.modulemap";
+				PRODUCT_MODULE_NAME = XDSecurityDefense;
+				PRODUCT_NAME = XDSecurityDefense;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C997CC3F08014404C68CE11CB3CC2418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A7FCCE1829AF8FA4D025BE79777803 /* Pods-XDSecurityDefense_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XDSecurityDefense_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XDSecurityDefense_Example/Pods-XDSecurityDefense_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B523B951F63AACEFEEAABB59A6F7452 /* Build configuration list for PBXNativeTarget "XDSecurityDefense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7EA077802FD5C685EB39BC356A4E40 /* Debug */,
+				AAF1B224216D43036545FD92D44F66C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		919323FAC8E13D630AD7073A6D775BC7 /* Build configuration list for PBXNativeTarget "Pods-XDSecurityDefense_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83145807FBA6FEF89B9C45FB7668C9F3 /* Debug */,
+				C997CC3F08014404C68CE11CB3CC2418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8588ADBEBABA19AB709088679560FB4 /* Build configuration list for PBXNativeTarget "Pods-XDSecurityDefense_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B5E3BA53B96CD00E5B19AA9E7A1067 /* Debug */,
+				5F65E80707ED95347B07416C62FB6AB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
