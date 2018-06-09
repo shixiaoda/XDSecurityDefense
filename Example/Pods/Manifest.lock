@@ -1,0 +1,16 @@
+PODS:
+  - XDSecurityDefense (0.1.0)
+
+DEPENDENCIES:
+  - XDSecurityDefense (from `../`)
+
+EXTERNAL SOURCES:
+  XDSecurityDefense:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XDSecurityDefense: ea70b0848e40c055d96113937ecf9dc7d1ba8a19
+
+PODFILE CHECKSUM: eecbd59d2c6f0d8be44367ed90904df40cd2a2eb
+
+COCOAPODS: 1.5.0

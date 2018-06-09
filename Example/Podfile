@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XDSecurityDefense_Example' do
+  pod 'XDSecurityDefense', :path => '../'
+
+  target 'XDSecurityDefense_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
