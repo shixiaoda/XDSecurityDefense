@@ -7,7 +7,6 @@
 //
 
 #import "XDViewController.h"
-#import "XDSecurityDefenseManager.h"
 
 @interface XDViewController ()
 
@@ -19,7 +18,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [XDSecurityDefenseManager initWithClassPrefix:@[@"XD"] ignoreFragment:nil];
 }
 
 - (void)didReceiveMemoryWarning

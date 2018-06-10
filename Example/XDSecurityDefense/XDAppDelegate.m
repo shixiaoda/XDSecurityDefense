@@ -7,6 +7,7 @@
 //
 
 #import "XDAppDelegate.h"
+#import "XDSecurityDefenseManager.h"
 
 @implementation XDAppDelegate
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [XDSecurityDefenseManager initWithClassPrefix:@[@"XD"] ignoreFragment:nil];
     // Override point for customization after application launch.
     return YES;
 }
