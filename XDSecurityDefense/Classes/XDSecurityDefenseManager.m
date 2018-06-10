@@ -178,7 +178,7 @@
     __unsafe_unretained Protocol **protocolList = class_copyProtocolList(className, &methodCount);
     for (int i = 0; i < methodCount; i++) {
         Protocol *protocal = protocolList[i];
-        const char *pName = protocol_getName(protocal);
+//        const char *pName = protocol_getName(protocal);
 //        NSLog(@"protocol[%d] ---- %@", i, [NSString stringWithUTF8String:pName]);
         
         unsigned int protocolMethodCount = 0;
