@@ -4,9 +4,10 @@
 TABLENAME=symbols
 SYMBOL_DB_FILE="symbols"
 STRING_SYMBOL_FILE="func.list"
-#HEAD_FILE="$PROJECT_DIR/$PROJECT_NAME/XDSecurityDefense.h"
-#HEAD_FILE="$PROJECT_DIR/Pods/XDSecurityDefense/Classes/XDSecurityDefense.h"
+##############################请设置正确的XDSecurityDefense.h 路径#################################
+#HEAD_FILE="$PROJECT_DIR/Pods/XDSecurityDefense/XDSecurityDefense/Classes/XDSecurityDefense.h"
 HEAD_FILE="$PROJECT_DIR/../XDSecurityDefense/Classes/XDSecurityDefense.h"
+#################################################################################################
 export LC_CTYPE=C
 
 #维护数据库方便日后作排重

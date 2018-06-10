@@ -18,15 +18,21 @@
 
 #pragma mark - public
 
-+ (void)initWithClassPrefix:(NSArray <NSString *> *)classPrefixArray ignoreFunctions:(NSArray <NSString *>*)functions; {
++ (void)initWithClassPrefix:(NSArray <NSString *> *)classPrefixArray ignoreFragment:(NSArray <NSString *>*)fragments {
     static XDSecurityDefenseManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[self alloc] init];
-        [manager generate];
+        [manager generate:classPrefixArray ignoreFragment:fragments];
     });
 }
 
+
+/**
+ 获取所有类的名称
+
+ @return 类的名称集合
+ */
 - (NSSet *)allClassName {
     NSMutableSet *allClassName = [NSMutableSet set];
     unsigned int outCount;
@@ -41,6 +47,11 @@
     return allClassName;
 }
 
+/**
+ 获取所有开发者创建的类的名称
+
+ @return 类的名称集合
+ */
 - (NSSet *)customClassNames {
     NSMutableSet *customClassName = [NSMutableSet set];
     unsigned int classNamesCount = 0;
@@ -59,6 +70,11 @@
     return customClassName;
 }
 
+/**
+ 获取所有苹果SDK的类的名称
+
+ @return 类的名称集合
+ */
 - (NSSet *)systemClassNames {
     NSMutableSet *systemClassNames = [self allClassName].mutableCopy;
     NSSet *customClassNames = [self customClassNames];
@@ -66,7 +82,24 @@
     return systemClassNames;
 }
 
+/**
+ 获取类的所有方法名
+
+ @param classNames 类的名称集合
+ @return 方法名集合
+ */
 - (NSSet *)methodNameListWithClasses:(NSSet <NSString *>*)classNames {
+    return [self methodNameListWithClasses:classNames ignoreSuperClass:YES];
+}
+
+/**
+ 获取类的所有方法名
+
+ @param classNames 类的名称集合
+ @param ignoreSuperClass 是否忽略继承自父类的方法
+ @return 方法名集合
+ */
+- (NSSet *)methodNameListWithClasses:(NSSet <NSString *>*)classNames ignoreSuperClass:(BOOL)ignoreSuperClass {
     NSMutableSet *methodNameList = [NSMutableSet set];
     [classNames enumerateObjectsUsingBlock:^(NSString * _Nonnull classNameString, BOOL * _Nonnull stop) {
         unsigned int methodCount = 0;
@@ -77,13 +110,21 @@
             SEL mName = method_getName(method);
             NSString *methodName = NSStringFromSelector(mName);
 //            NSLog(@"instance method[%d] ---- %@", i, methodName);
-            [methodNameList addObject:methodName];
+            if (ignoreSuperClass || ![self superClass:className respondsToSelector:mName]) {
+                [methodNameList addObject:methodName];
+            }
         }
         free(methodList);
     }];
     return methodNameList;
 }
 
+/**
+ 将方法名按:分隔成片段
+
+ @param methodNameList 方法名集合
+ @return 片段集合
+ */
 - (NSSet *)methodNameFragment:(NSSet <NSString *>*)methodNameList
 {
     NSMutableSet *methodNameFragment = [NSMutableSet set];
@@ -98,6 +139,12 @@
     return methodNameFragment;
 }
 
+/**
+ 获取类的所有属性操作方法 getter & setter
+
+ @param classNameString 类名集合
+ @return 方法名集合
+ */
 - (NSSet *)propertyListWithClass:(NSString *)classNameString {
     NSMutableSet *propertyList = [NSMutableSet set];
     Class className = NSClassFromString(classNameString);
@@ -118,6 +165,12 @@
     return propertyList;
 }
 
+/**
+ 获取类遵循所有协议的协议方法名
+
+ @param classNameString 类的集合
+ @return 方法名集合
+ */
 - (NSSet *)protocalMethodListWithClass:(NSString *)classNameString {
     NSMutableSet *protocalMethodList = [NSMutableSet set];
     Class className = NSClassFromString(classNameString);
@@ -147,6 +200,13 @@
     return protocalMethodList;
 }
 
+/**
+ 检查方法是否继承自父类
+
+ @param class 类
+ @param sel 方法名
+ @return 是否继承自父类
+ */
 - (BOOL)superClass:(Class)class respondsToSelector:(SEL)sel
 {
     Class supClass = class_getSuperclass(class);
@@ -162,15 +222,36 @@
     return bTespondsToSelector;
 }
 
-- (void)generate {
+
+/**
+ 生成代混淆的字符片段
+
+ @param classPrefixArray 需要混淆的类名前缀数组
+ @param fragments 需要忽略的字符片段
+ */
+- (void)generate:(NSArray <NSString *> *)classPrefixArray ignoreFragment:(NSArray <NSString *>*)fragments {
     NSSet *systemClassNames = [self systemClassNames];
     NSSet *systemMethodList = [self methodNameFragment:[self methodNameListWithClasses:systemClassNames]];
     
-    NSSet *customClassNames = [self customClassNames];
-//    NSSet *customMethodNameList = [self methodNameListWithClasses:customClassNames];
+    //获取目标类的名称
+    NSMutableSet *customClassNames = [self customClassNames].mutableCopy;
+    [customClassNames.mutableCopy enumerateObjectsUsingBlock:^(NSString* obj, BOOL * _Nonnull stop) {
+        __block BOOL bFind = NO;
+        [classPrefixArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop2) {
+            if ([obj hasPrefix:obj2]) {
+                bFind = YES;
+                *stop2 = YES;
+            }
+        }];
+        if (!bFind) {
+            [customClassNames removeObject:obj];
+        }
+    }];
+    
+    //过滤掉 属性方法 和 协议方法
     __block NSSet <NSString *>*funcList = [NSMutableSet set];
     [customClassNames enumerateObjectsUsingBlock:^(NSString* className, BOOL * _Nonnull stop) {
-        NSMutableSet *customMethodNameList = [self methodNameFragment:[self methodNameListWithClasses:[NSSet setWithObject:className]]].mutableCopy;
+        NSMutableSet *customMethodNameList = [self methodNameFragment:[self methodNameListWithClasses:[NSSet setWithObject:className] ignoreSuperClass:NO]].mutableCopy;
         NSSet *propertyList = [self methodNameFragment:[self propertyListWithClass:className]];
         NSSet *protocalMethodList = [self methodNameFragment:[self protocalMethodListWithClass:className]];
         
@@ -181,11 +262,13 @@
 //        NSLog(@"funcList : %@",customMethodNameList);
         funcList = [funcList setByAddingObjectsFromSet:customMethodNameList];
     }];
+    //增加 目标类名
+    funcList = [funcList setByAddingObjectsFromSet:customClassNames];
     
     NSArray *paths  = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
     NSString *homePath = [paths objectAtIndex:0];
     NSString *filePath = [homePath stringByAppendingPathComponent:@"func.list"];
-    NSLog(@"path = %@",filePath);
+    NSLog(@"待混淆的字符片段文件 path = %@",filePath);
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:filePath]) //如果不存在
     {
@@ -196,10 +279,23 @@
     
     [fileHandle seekToEndOfFile];
     
+    //过滤掉主动忽略片段、过短的片段、init开头的片段
     [funcList enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, BOOL * _Nonnull stop) {
-        NSString *data = [obj stringByAppendingString:@"\n"];
-        NSData* stringData  = [data dataUsingEncoding:NSUTF8StringEncoding];
-        [fileHandle writeData:stringData]; //追加写入数据
+        if (obj.length > 8 && ![obj hasPrefix:@"init"]) {
+            __block BOOL bFind = NO;
+            [fragments enumerateObjectsUsingBlock:^(NSString * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop2) {
+                if ([obj isEqualToString:obj2]) {
+                    bFind = YES;
+                    *stop2 = YES;
+                }
+            }];
+            
+            if (!bFind) {
+                NSString *data = [obj stringByAppendingString:@"\n"];
+                NSData* stringData  = [data dataUsingEncoding:NSUTF8StringEncoding];
+                [fileHandle writeData:stringData]; //追加写入数据
+            }
+        }
     }];
     
     [fileHandle closeFile];

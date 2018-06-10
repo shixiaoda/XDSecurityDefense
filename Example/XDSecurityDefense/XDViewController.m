@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [XDSecurityDefenseManager initWithClassPrefix:@[@"XD"] ignoreFunctions:nil];
+    [XDSecurityDefenseManager initWithClassPrefix:@[@"XD"] ignoreFragment:nil];
 }
 
 - (void)didReceiveMemoryWarning
