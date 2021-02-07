@@ -18,12 +18,18 @@
 
 #pragma mark - public
 
-+ (void)initWithClassPrefix:(NSArray <NSString *> *)classPrefixArray ignoreFragment:(NSArray <NSString *>*)fragments {
++ (void)initWithClassPrefix:(NSArray <NSString *> *)classPrefixArray
+          ignoreClassSuffix:(NSArray <NSString *>*)ignoreClassSuffix
+                ignoreClass:(NSArray <NSString *>*)ignoreClass
+             ignoreFragment:(NSArray <NSString *>*)fragments {
     static XDSecurityDefenseManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[self alloc] init];
-        [manager generate:classPrefixArray ignoreFragment:fragments];
+        [manager generate:classPrefixArray
+        ignoreClassSuffix:ignoreClassSuffix
+              ignoreClass:ignoreClass
+           ignoreFragment:fragments];
     });
 }
 
@@ -130,11 +136,13 @@
     NSMutableSet *methodNameFragment = [NSMutableSet set];
     [methodNameList enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, BOOL * _Nonnull stop) {
         NSArray <NSString *>*fragment = [obj componentsSeparatedByString:@":"];
-        [fragment enumerateObjectsUsingBlock:^(NSString * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (![obj2 containsString:@":"] && ![obj2 hasPrefix:@"."]) {
-                [methodNameFragment addObject:obj2];
-            }
-        }];
+        if (fragment.count == 1) {
+            [fragment enumerateObjectsUsingBlock:^(NSString * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (![obj2 containsString:@":"] && ![obj2 hasPrefix:@"."]) {
+                    [methodNameFragment addObject:obj2];
+                }
+            }];
+        }
     }];
     return methodNameFragment;
 }
@@ -229,22 +237,42 @@
  @param classPrefixArray 需要混淆的类名前缀数组
  @param fragments 需要忽略的字符片段
  */
-- (void)generate:(NSArray <NSString *> *)classPrefixArray ignoreFragment:(NSArray <NSString *>*)fragments {
+- (void)generate:(NSArray <NSString *> *)classPrefixArray
+ignoreClassSuffix:(NSArray <NSString *>*)ignoreClassSuffix
+     ignoreClass:(NSArray <NSString *>*)ignoreClass
+  ignoreFragment:(NSArray <NSString *>*)fragments {
+    
     NSSet *systemClassNames = [self systemClassNames];
     NSSet *systemMethodList = [self methodNameFragment:[self methodNameListWithClasses:systemClassNames]];
     
     //获取目标类的名称
-    NSMutableSet *customClassNames = [self customClassNames].mutableCopy;
-    [customClassNames.mutableCopy enumerateObjectsUsingBlock:^(NSString* obj, BOOL * _Nonnull stop) {
+    NSMutableSet *customClassNames_all = [self customClassNames].mutableCopy;
+    NSMutableSet *customClassNames = [NSMutableSet set];
+    [customClassNames_all enumerateObjectsUsingBlock:^(NSString* obj, BOOL * _Nonnull stop) {
         __block BOOL bFind = NO;
         [classPrefixArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop2) {
-            if ([obj hasPrefix:obj2]) {
+            if ([[obj lowercaseString] hasPrefix:[obj2 lowercaseString]]) {
                 bFind = YES;
                 *stop2 = YES;
             }
         }];
-        if (!bFind) {
-            [customClassNames removeObject:obj];
+        
+        [ignoreClassSuffix enumerateObjectsUsingBlock:^(NSString * _Nonnull obj3, NSUInteger idx, BOOL * _Nonnull stop3) {
+            if ([[obj lowercaseString] hasSuffix:[obj3 lowercaseString]]) {
+                bFind = NO;
+                *stop3 = YES;
+            }
+        }];
+        
+        [ignoreClass enumerateObjectsUsingBlock:^(NSString * _Nonnull obj4, NSUInteger idx, BOOL * _Nonnull stop4) {
+            if ([[obj lowercaseString] isEqualToString:[obj4 lowercaseString]]) {
+                bFind = NO;
+                *stop4 = YES;
+            }
+        }];
+        
+        if (bFind) {
+            [customClassNames addObject:obj];
         }
     }];
     
@@ -281,10 +309,13 @@
     
     //过滤掉主动忽略片段、过短的片段、init开头的片段
     [funcList enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, BOOL * _Nonnull stop) {
-        if (obj.length > 8 && ![obj hasPrefix:@"init"]) {
+        if (obj.length > 8 && ![obj hasPrefix:@"init"] && ![obj hasPrefix:@"get"] && ![obj hasPrefix:@"set"]) {
             __block BOOL bFind = NO;
             [fragments enumerateObjectsUsingBlock:^(NSString * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop2) {
-                if ([obj isEqualToString:obj2]) {
+                if ([[obj lowercaseString] isEqualToString:[obj2 lowercaseString]]) {
+                    bFind = YES;
+                    *stop2 = YES;
+                } else if ([[obj lowercaseString] containsString:[obj2 lowercaseString]]) {
                     bFind = YES;
                     *stop2 = YES;
                 }

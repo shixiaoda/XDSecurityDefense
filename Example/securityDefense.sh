@@ -6,7 +6,7 @@ SYMBOL_DB_FILE="symbols"
 STRING_SYMBOL_FILE="func.list"
 ##############################请设置正确的XDSecurityDefense.h 路径#################################
 #HEAD_FILE="$PROJECT_DIR/Pods/XDSecurityDefense/XDSecurityDefense/Classes/XDSecurityDefense.h"
-HEAD_FILE="$PROJECT_DIR/../XDSecurityDefense/Classes/XDSecurityDefense.h"
+HEAD_FILE="../XDSecurityDefense/Classes/XDSecurityDefense.h"
 #################################################################################################
 export LC_CTYPE=C
 
@@ -41,8 +41,8 @@ rm -f $HEAD_FILE
 createTable
 
 touch $HEAD_FILE
-echo '#ifndef Demo_codeObfuscation_h
-#define Demo_codeObfuscation_h' >> $HEAD_FILE
+echo '#ifndef XDSecurityDefense_h
+#define XDSecurityDefense_h' >> $HEAD_FILE
 echo "//confuse string at `date`" >> $HEAD_FILE
 cat "$STRING_SYMBOL_FILE" | while read -ra line; do
 if [[ ! -z "$line" ]]; then

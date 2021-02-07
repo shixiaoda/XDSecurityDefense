@@ -12,6 +12,9 @@
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 
-+ (void)initWithClassPrefix:(NSArray <NSString *> *)classPrefixArray ignoreFragment:(NSArray <NSString *>*)fragments;
++ (void)initWithClassPrefix:(NSArray <NSString *> *)classPrefixArray
+          ignoreClassSuffix:(NSArray <NSString *>*)ignoreClassSuffix
+                ignoreClass:(NSArray <NSString *>*)ignoreClass
+             ignoreFragment:(NSArray <NSString *>*)fragments;
 
 @end
